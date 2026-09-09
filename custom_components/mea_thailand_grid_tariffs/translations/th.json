@@ -1,0 +1,27 @@
+{
+  "title": "MEA Thailand Grid Tariffs",
+  "config": {
+    "step": {
+      "user": {
+        "title": "MEA Thailand Grid Tariffs",
+        "description": "ดึงอัตราค่าไฟฟ้าจากเว็บไซต์การไฟฟ้านครหลวงโดยอัตโนมัติ",
+        "data": {
+          "sub_tariff": "เลือกประเภทการใช้ไฟฟ้า"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "ตั้งค่าประเภทนี้ไว้แล้ว"
+    }
+  },
+  "selector": {
+    "sub_tariff": {
+      "options": {
+        "le150": "อัตรา 1.1 ไม่เกิน 150 หน่วย",
+        "gt150": "อัตรา 1.2 เกิน 150 หน่วย",
+        "tou_131": "อัตรา 1.3.1 TOU (12-24 kV)",
+        "tou_132": "อัตรา 1.3.2 TOU (ต่ำกว่า 12 kV)"
+      }
+    }
+  }
+}

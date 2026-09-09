@@ -1,0 +1,12 @@
+{
+  "domain": "mea_thailand_grid_tariffs",
+  "name": "MEA Thailand Grid Tariffs",
+  "codeowners": ["@terngz"],
+  "config_flow": true,
+  "documentation": "https://github.com/terngz/mea_thailand_grid_tariffs",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/terngz/mea_thailand_grid_tariffs/issues",
+  "requirements": [],
+  "version": "1.0.0"
+}
