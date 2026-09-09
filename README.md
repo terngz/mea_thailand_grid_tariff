@@ -22,18 +22,18 @@ Custom Component for Home Assistant to parse real-time electricity tariff rates 
 
 ## Sensor Entities
 
-The entities generated depend on the sub-tariff category selected during integration setup. All entity IDs use the base prefix `sensor.mea_thailand_grid_tariff_residential_1_`.
+The entities generated depend on the sub-tariff category selected during integration setup. All entity IDs use the base prefix `sensor.mea_thailand_grid_tariff_`.
 
 ### Overview
 
 | Sensor Category | Entity ID Pattern | Unit | Description |
 | :--- | :--- | :---: | :--- |
-| **Ft Rate** | `sensor.mea_thailand_grid_tariff_residential_1_<slug>_ft_rate` | `THB/kWh` | Global current Ft variable rate |
-| **On Peak Rate** | `sensor.mea_thailand_grid_tariff_residential_1_<slug>_on_peak` | `THB/kWh` | TOU peak electricity rate |
-| **Off Peak Rate** | `sensor.mea_thailand_grid_tariff_residential_1_<slug>_off_peak` | `THB/kWh` | TOU off-peak electricity rate |
-| **TOU Status** | `sensor.mea_thailand_grid_tariff_residential_1_<slug>_tou_time_status` | String | Current TOU period status |
-| **Tier Rate** | `sensor.mea_thailand_grid_tariff_residential_1_<slug>_tier<N>_<range>` | `THB/kWh` | Step/tiered consumption rate |
-| **Service Charge** | `sensor.mea_thailand_grid_tariff_residential_1_<slug>_service_charge` | `THB` | Base monthly service fee |
+| **Tier Rate** | `sensor.mea_thailand_grid_tariff_<slug>_tier<N>_<range>` | `THB/kWh` | Step/tiered consumption rate |
+| **Ft Rate** | `sensor.mea_thailand_grid_tariff_<slug>_ft_rate` | `THB/kWh` | Global current Ft variable rate |
+| **Service Charge** | `sensor.mea_thailand_grid_tariff_<slug>_service_charge` | `THB` | Base monthly service fee |
+| **On Peak Rate** | `sensor.mea_thailand_grid_tariff_<slug>_on_peak` | `THB/kWh` | TOU peak electricity rate |
+| **Off Peak Rate** | `sensor.mea_thailand_grid_tariff_<slug>_off_peak` | `THB/kWh` | TOU off-peak electricity rate |
+| **TOU Status** | `sensor.mea_thailand_grid_tariff_<slug>_tou_time_status` | String | Current TOU period status |
 
 ---
 
@@ -42,46 +42,46 @@ The entities generated depend on the sub-tariff category selected during integra
 <details>
 <summary><b>Type 1.1 — Household ≤ 150 kWh (le150)</b></summary>
 
-* `sensor.mea_thailand_grid_tariff_residential_1_type_1_1_below_150_tier1_1_15`
-* `sensor.mea_thailand_grid_tariff_residential_1_type_1_1_below_150_tier2_16_25`
-* `sensor.mea_thailand_grid_tariff_residential_1_type_1_1_below_150_tier3_26_200`
-* `sensor.mea_thailand_grid_tariff_residential_1_type_1_1_below_150_tier4_201_400`
-* `sensor.mea_thailand_grid_tariff_residential_1_type_1_1_below_150_tier5_401_onward`
-* `sensor.mea_thailand_grid_tariff_residential_1_type_1_1_below_150_service_charge`
-* `sensor.mea_thailand_grid_tariff_residential_1_type_1_1_below_150_ft_rate`
+* `sensor.mea_thailand_grid_tariff_type_1_1_below_150_tier1_1_15`
+* `sensor.mea_thailand_grid_tariff_type_1_1_below_150_tier2_16_25`
+* `sensor.mea_thailand_grid_tariff_type_1_1_below_150_tier3_26_200`
+* `sensor.mea_thailand_grid_tariff_type_1_1_below_150_tier4_201_400`
+* `sensor.mea_thailand_grid_tariff_type_1_1_below_150_tier5_401_onward`
+* `sensor.mea_thailand_grid_tariff_type_1_1_below_150_service_charge`
+* `sensor.mea_thailand_grid_tariff_type_1_1_below_150_ft_rate`
 
 </details>
 
 <details>
 <summary><b>Type 1.2 — Household > 150 kWh (gt150)</b></summary>
 
-* `sensor.mea_thailand_grid_tariff_residential_1_type_1_2_greater_150_tier1_1_200`
-* `sensor.mea_thailand_grid_tariff_residential_1_type_1_2_greater_150_tier2_201_400`
-* `sensor.mea_thailand_grid_tariff_residential_1_type_1_2_greater_150_tier3_401_onward`
-* `sensor.mea_thailand_grid_tariff_residential_1_type_1_2_greater_150_service_charge`
-* `sensor.mea_thailand_grid_tariff_residential_1_type_1_2_greater_150_ft_rate`
+* `sensor.mea_thailand_grid_tariff_type_1_2_greater_150_tier1_1_200`
+* `sensor.mea_thailand_grid_tariff_type_1_2_greater_150_tier2_201_400`
+* `sensor.mea_thailand_grid_tariff_type_1_2_greater_150_tier3_401_onward`
+* `sensor.mea_thailand_grid_tariff_type_1_2_greater_150_service_charge`
+* `sensor.mea_thailand_grid_tariff_type_1_2_greater_150_ft_rate`
 
 </details>
 
 <details>
 <summary><b>Type 1.3.1 — TOU Voltage 12–24 kV (tou_131)</b></summary>
 
-* `sensor.mea_thailand_grid_tariff_residential_1_type_1_3_1_tou_12_24_on_peak`
-* `sensor.mea_thailand_grid_tariff_residential_1_type_1_3_1_tou_12_24_off_peak`
-* `sensor.mea_thailand_grid_tariff_residential_1_type_1_3_1_tou_12_24_tou_time_status`
-* `sensor.mea_thailand_grid_tariff_residential_1_type_1_3_1_tou_12_24_service_charge`
-* `sensor.mea_thailand_grid_tariff_residential_1_type_1_3_1_tou_12_24_ft_rate`
+* `sensor.mea_thailand_grid_tariff_type_1_3_1_tou_12_24_on_peak`
+* `sensor.mea_thailand_grid_tariff_type_1_3_1_tou_12_24_off_peak`
+* `sensor.mea_thailand_grid_tariff_type_1_3_1_tou_12_24_tou_time_status`
+* `sensor.mea_thailand_grid_tariff_type_1_3_1_tou_12_24_service_charge`
+* `sensor.mea_thailand_grid_tariff_type_1_3_1_tou_12_24_ft_rate`
 
 </details>
 
 <details>
 <summary><b>Type 1.3.2 — TOU Voltage < 12 kV (tou_132)</b></summary>
 
-* `sensor.mea_thailand_grid_tariff_residential_1_type_1_3_2_tou_under_12_on_peak`
-* `sensor.mea_thailand_grid_tariff_residential_1_type_1_3_2_tou_under_12_off_peak`
-* `sensor.mea_thailand_grid_tariff_residential_1_type_1_3_2_tou_under_12_tou_time_status`
-* `sensor.mea_thailand_grid_tariff_residential_1_type_1_3_2_tou_under_12_service_charge`
-* `sensor.mea_thailand_grid_tariff_residential_1_type_1_3_2_tou_under_12_ft_rate`
+* `sensor.mea_thailand_grid_tariff_type_1_3_2_tou_under_12_on_peak`
+* `sensor.mea_thailand_grid_tariff_type_1_3_2_tou_under_12_off_peak`
+* `sensor.mea_thailand_grid_tariff_type_1_3_2_tou_under_12_tou_time_status`
+* `sensor.mea_thailand_grid_tariff_type_1_3_2_tou_under_12_service_charge`
+* `sensor.mea_thailand_grid_tariff_type_1_3_2_tou_under_12_ft_rate`
 
 </details>
 
